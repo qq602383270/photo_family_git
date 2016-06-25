@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultDir="/WEB-INF/views/decorators">
+	
+	<excludes>  
+		<pattern>/check-status.jsp</pattern>
+		<pattern>/*ajax_*</pattern>
+    </excludes>
+	
+	<!-- 默认装饰 -->
+	<decorator name="default" page="default.jsp">
+		<pattern>/recharge/*</pattern>
+		<pattern>/error/*</pattern>
+		<pattern>/agreement/*</pattern>
+		<pattern>/*</pattern>
+	</decorator>
+	
+	<!-- 不需要装饰器 -->
+	<decorator name="no">
+		<pattern>/*ajax_*</pattern>
+		<pattern>/banklimit/*</pattern>
+		<pattern>/*.jsp</pattern>
+	</decorator>
+	
+</decorators>

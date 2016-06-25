@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>photofamily</groupId>
+		<artifactId>photofamily-pom-parent</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<groupId>photofamily</groupId>
+	<artifactId>photofamily</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>photofamily-core</module>
+		<module>photofamily-web</module>
+	</modules>
+	<build>
+		<finalName>photofamily</finalName>
+	</build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.7</jdk.version>
+		<photofamily.web.version>1.0</photofamily.web.version>
+		<photofamily.core.version>1.0</photofamily.core.version>
+		<junit.version>3.8.1</junit.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
+		<asm.version>4.2</asm.version>
+		<cglib.version>3.1</cglib.version>
+		<validation.api.verstion>1.1.0.Final</validation.api.verstion>
+		<hessian.version>3.1.5</hessian.version>
+		<aspectj.version>1.7.4</aspectj.version>
+		<sitemesh.version>3.0.0</sitemesh.version>
+		<sitemesh2.version>2.4.2</sitemesh2.version>
+		<slf4j.version>1.7.5</slf4j.version>
+		<servlet.version>3.0.1</servlet.version>
+		<jsp.version>2.2</jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<standard.version>1.1.2</standard.version>
+		<jackson.version>2.3.0</jackson.version>
+		<commons.logging.version>1.1.3</commons.logging.version>
+		<commons.logging.version>1.1.3</commons.logging.version>
+		<commons.dbcp.version>1.2.2</commons.dbcp.version>
+		<mysql.version>5.1.25</mysql.version>
+		<kaptcha.version>2.3</kaptcha.version>
+	</properties>
+	<profiles>
+		<profile>
+			<id>jdk17</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>${jdk.version}</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>${jdk.version}</maven.compiler.source>
+				<maven.compiler.target>${jdk.version}</maven.compiler.target>
+				<maven.compiler.compilerVersion>${jdk.version}</maven.compiler.compilerVersion>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

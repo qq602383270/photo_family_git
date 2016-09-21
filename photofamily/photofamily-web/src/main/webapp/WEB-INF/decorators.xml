@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<decorators defaultDir="/WEB-INF/views/decorators">
+<decorators defaultDir="/WEB-INF/view/dwr/decorators">
 	
 	<excludes>  
 		<pattern>/check-status.jsp</pattern>

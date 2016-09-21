@@ -7,6 +7,8 @@
 
 package cn.pothofamily.commons.controller;
 
+import org.springframework.stereotype.Controller;
+
 /**
  * ClassName:BasicController <br/>
  * Function: TODO ADD FUNCTION. <br/>
@@ -18,9 +20,7 @@ package cn.pothofamily.commons.controller;
  * @since JDK 1.7
  * @see
  */
+@Controller
 public class BasicController {
-    public static void main(String[] args) {
-        
-    }
 }
 

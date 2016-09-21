@@ -1,0 +1,25 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="dataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/LOCALHOST</Arg>
+        <Arg>
+            <New class="com.alibaba.druid.pool.DruidDataSource">
+                <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+                <Set name="url">jdbc:mysql://127.0.0.1:3306/photo?characterEncoding=utf-8</Set>
+                <Set name="username">root</Set>
+                <Set name="password">root</Set>
+
+                <Set name="initialSize">1</Set>
+                <Set name="maxActive">1</Set>
+                <Set name="maxWait">60000</Set>
+                <Set name="minEvictableIdleTimeMillis">300000</Set>
+            </New>
+        </Arg>
+        <Call name="bindToENC">
+	        <Arg>jdbc/LOCALHOST</Arg>  <!-- binds jdbc/myds to java:comp/env/jdbc/myfoo for this webapp -->
+	    </Call> 
+    </New>
+</Configure>

@@ -7,7 +7,7 @@
  *
 */
 
-package cn.pothofamily.scancode;
+package cn.pothofamily.scancode.controller;
 
 import java.io.IOException;
 

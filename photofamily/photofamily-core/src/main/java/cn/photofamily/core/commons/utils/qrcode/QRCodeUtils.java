@@ -1,4 +1,4 @@
-package photofamily.core.commons.utils.qrcode;
+package cn.photofamily.core.commons.utils.qrcode;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;

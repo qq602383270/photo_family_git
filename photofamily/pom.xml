@@ -60,6 +60,7 @@
 		<commons-discovery.version>0.2</commons-discovery.version>
 		<bcprov-jdk15on.version>1.52</bcprov-jdk15on.version>
 		<fastjson.version>1.2.7</fastjson.version>
+		<json.version>20090211</json.version>
 
 	</properties>
 	<profiles>

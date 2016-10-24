@@ -8,6 +8,7 @@
 */
 
 package cn.photofamily.test;
+
 /**
  * ClassName:TestBasic <br/>
  * Function: TODO ADD FUNCTION. <br/>
@@ -19,7 +20,5 @@ package cn.photofamily.test;
  * @see 	 
  */
 public class TestBasic {
-    public static void main(String[] args) {
-    }
 }
 

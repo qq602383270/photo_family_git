@@ -1,4 +1,4 @@
-package photofamily.core.commons.utils;
+package cn.photofamily.core.commons.utils;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;

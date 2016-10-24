@@ -1,4 +1,4 @@
-package photofamily.core.commons.utils.qrcode;
+package cn.photofamily.core.commons.utils.qrcode;
 
 import com.google.zxing.LuminanceSource; 
 import java.awt.Graphics2D; 

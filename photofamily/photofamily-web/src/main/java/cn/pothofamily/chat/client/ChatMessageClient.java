@@ -14,9 +14,9 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.ServletContextAware;
 
+import cn.photofamily.core.commons.utils.DateUtils;
 import cn.pothofamily.chat.entity.Message;
 import cn.pothofamily.chat.event.ChatMessageEvent;
-import photofamily.core.commons.utils.DateUtils;
 
 @SuppressWarnings("rawtypes")
 @Component

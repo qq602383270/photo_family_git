@@ -11,8 +11,6 @@
 	<decorator name="default" page="default.jsp">
 		<pattern>/recharge/*</pattern>
 		<pattern>/error/*</pattern>
-		<pattern>/agreement/*</pattern>
-		<pattern>/*</pattern>
 	</decorator>
 	
 	<!-- 不需要装饰器 -->

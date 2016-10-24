@@ -20,14 +20,18 @@ import java.util.concurrent.ArrayBlockingQueue;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSONObject;
 
+import cn.photofamily.core.commons.utils.CryptoUtil;
+import cn.photofamily.core.commons.utils.HttpClient4Util;
+import cn.photofamily.core.commons.utils.XMLUtils;
 import cn.pothofamily.scancode.xml.Merchant;
 import cn.pothofamily.scancode.xml.Message;
-import photofamily.core.commons.utils.CryptoUtil;
-import photofamily.core.commons.utils.HttpClient4Util;
-import photofamily.core.commons.utils.XMLUtils;
+
+
+
 
 /**
  * ClassName:CMCCUtlis <br/>
@@ -39,17 +43,18 @@ import photofamily.core.commons.utils.XMLUtils;
  * @since    JDK 1.7
  * @see 	 
  */
+@Component
 public class CMCCUtlis {
     
 
     /**
      * 民生请求地址
      */
-    private String serverUrl;
+    private String serverUrl= "http://110.80.39.174:9013/nbp-smzf-hzf";
     /**
      * 回调地址
      */
-    private String callBack;
+    private String callBack="https://dev-bankchannel.ehking.com/bankchannel/";
     /**
      * 编码
      */
@@ -57,23 +62,20 @@ public class CMCCUtlis {
     /**
      * 合作方标示
      */
-    private String cooperator;
+    private String cooperator="SMZF_YHJ"; //   合作方标示
     /**
      * 民生公钥
      */
-    private String msPublicKeyPath;
+    private String msPublicKeyPath= "/Users/wangyonghe/Downloads/ms/ehking_ms_rsa_public_key_2048.pem";
     /**
      * 合作方私钥
      */
-    private String hzfPrivateKeyPath;
+    private String hzfPrivateKeyPath= "/Users/wangyonghe/Downloads/ms/ehking_pkcs8_rsa_private_key_2048.pem";
     /**
      * AES密钥
      */
-    private String AESkeyStr;
-    /**
-     * 商户编号
-     */
-    private String merchantCode;
+    private String AESkeyStr= "1122334455667788";
+
     
     @SuppressWarnings({"rawtypes", "unchecked"})
     public Message post(String reqMsgId, Merchant merchant, String tranCode, Class<?> clazz) throws Exception {

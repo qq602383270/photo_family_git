@@ -26,7 +26,7 @@
 		<jdk.version>1.7</jdk.version>
 		<photofamily.web.version>1.0</photofamily.web.version>
 		<photofamily.core.version>1.0</photofamily.core.version>
-		<junit.version>3.8.1</junit.version>
+		<junit.version>4.11</junit.version>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<asm.version>4.2</asm.version>
 		<cglib.version>3.1</cglib.version>
@@ -61,6 +61,7 @@
 		<bcprov-jdk15on.version>1.52</bcprov-jdk15on.version>
 		<fastjson.version>1.2.7</fastjson.version>
 		<json.version>20090211</json.version>
+		<hessian.version>4.0.7</hessian.version>
 
 	</properties>
 	<profiles>

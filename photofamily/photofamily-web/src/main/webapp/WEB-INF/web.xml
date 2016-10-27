@@ -120,4 +120,23 @@
     <servlet-name>dwr-invoker</servlet-name>
     <url-pattern>/dwr/*</url-pattern>
 </servlet-mapping>
+<servlet>  
+        <servlet-name>HelloServlet</servlet-name>  
+        <!-- Hession提供的Servlet -->  
+        <servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>  
+        <init-param>  
+            <param-name>home-class</param-name>  
+            <!-- 服务器对接口的现实，供客户端调用 -->  
+            <param-value>cn.pothofamily.hessian.impl.HelloImpl</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>home-api</param-name>  
+            <!-- 客户端接口 -->  
+            <param-value>cn.pothofamily.hessian.IHello</param-value>  
+        </init-param>  
+    </servlet>  
+    <servlet-mapping>  
+        <servlet-name>HelloServlet</servlet-name>  
+        <url-pattern>/HelloServlet</url-pattern>  
+    </servlet-mapping>
 </web-app>

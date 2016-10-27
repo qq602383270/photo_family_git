@@ -20,5 +20,6 @@ package cn.photofamily.test;
  * @see 	 
  */
 public class TestBasic {
+
 }
 

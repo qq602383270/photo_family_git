@@ -50,7 +50,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.kaptcha</groupId>
@@ -196,6 +195,12 @@
 			<artifactId>jetty-server</artifactId>
 			<version>${jetty.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.caucho</groupId>
+			<artifactId>hessian</artifactId>
+			<version>${hessian.version}</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

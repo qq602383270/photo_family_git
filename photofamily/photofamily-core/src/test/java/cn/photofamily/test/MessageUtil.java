@@ -107,7 +107,6 @@ public class MessageUtil {
         for (String key : set) {
             sb.append(key).append("=").append(reqjson.get(key));
         }
-        sb = new StringBuffer(sb.toString().replaceAll(" ", ""));
 
         sb.append(secretkey);
 
@@ -127,7 +126,7 @@ public class MessageUtil {
         jsonObj.put("ts", System.currentTimeMillis());
         jsonObj.put("phone", "18510970050,13519338423");
         jsonObj.put("templateId", "1533");
-        jsonObj.put("content", "王永贺测试");
+        jsonObj.put("content", "2016-10-28 16:40:06,商户编号120140583发生境内转帐下发业务已经扣款，请核对扣款金额。");
         jsonObj.put("taskId", taskId);// 不超过64位长度的唯一字符串，通过和recvRPT获取的结果里的teskid关联，确定发送的信息是否收到。
         jsonObj.put("extNum", "");
         jsonObj.put("sig", getSig(jsonObj, "E1F137695622FA7B"));

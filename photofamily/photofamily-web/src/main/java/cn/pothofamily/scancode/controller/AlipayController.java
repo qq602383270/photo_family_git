@@ -9,6 +9,7 @@ package cn.pothofamily.scancode.controller;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.ServletOutputStream;
@@ -19,8 +20,12 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 
 import cn.photofamily.core.commons.utils.XMLUtils;
 import cn.photofamily.core.commons.utils.qrcode.QRCodeUtils;
@@ -55,6 +60,14 @@ public class AlipayController extends BasicController {
         ModelAndView mav = new ModelAndView("alipay/scancode/index");
         System.err.println(request);
 
+        return mav;
+    }
+    
+    @RequestMapping("/arrays")
+    public ModelAndView arrays(HttpServletResponse response, HttpServletRequest request,@RequestBody Object[] nums) throws IOException {
+        ModelAndView mav = new ModelAndView("alipay/scancode/index");
+        System.err.println(nums);
+        
         return mav;
     }
 

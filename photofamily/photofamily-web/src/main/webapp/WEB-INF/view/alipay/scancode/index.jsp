@@ -11,7 +11,25 @@
 <meta http-equiv="expires" content="0">
 
 <script type="text/javascript">
-
+	function arrays(){
+		var arrs=[{"name":"wangyonghe","mobile":"18510970050"},{"name":"guosai","mobile":"18510970050"}];
+		for(var i=0;i<10;i++){
+			//arrs.push("a_"+i);
+			console.log(i);
+		}
+		$.ajax({
+            dataType: "json",
+            contentType : 'application/json',
+            type: "POST",
+            url:"${ctx}/alipay/arrays",
+            data:JSON.stringify(arrs),
+            error: function(data) {
+                alert("Connection error");
+            },
+            success: function(data) {
+            }
+        });
+	}
 </script>
 </head>
 
@@ -20,6 +38,6 @@
 	金额:<input name="amount" type="text" />
 	<input type="submit"/>
 </form>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="arrays()" text="测试数组" />
 </body>
 </html>

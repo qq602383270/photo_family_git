@@ -124,7 +124,7 @@ public class MessageUtil {
         jsonObj.put("op", "Sms.send");
         jsonObj.put("apiKey", "70c26d58126ae3ca9446b7453f22af0c");
         jsonObj.put("ts", System.currentTimeMillis());
-        jsonObj.put("phone", "18510970050,13519338423");
+        jsonObj.put("phone", "18510970050");
         jsonObj.put("templateId", "1533");
         jsonObj.put("content", "2016-10-28 16:40:06,商户编号120140583发生境内转帐下发业务已经扣款，请核对扣款金额。");
         jsonObj.put("taskId", taskId);// 不超过64位长度的唯一字符串，通过和recvRPT获取的结果里的teskid关联，确定发送的信息是否收到。
